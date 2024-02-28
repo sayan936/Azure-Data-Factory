@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "file_exist",
+				"name": "file_exist_check",
 				"type": "Validation",
 				"dependsOn": [],
 				"userProperties": [],
@@ -21,7 +21,7 @@
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
-						"activity": "file_exist",
+						"activity": "file_exist_check",
 						"dependencyConditions": [
 							"Succeeded"
 						]

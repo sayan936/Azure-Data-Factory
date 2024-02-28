@@ -1,0 +1,9 @@
+{
+	"name": "f1projectfactory97",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ba1e22d7-8ba3-45e5-ad80-777f657d1b24",
+		"tenantId": "2613162e-8fb5-4cb8-8b51-6d2ce24a132d"
+	}
+}

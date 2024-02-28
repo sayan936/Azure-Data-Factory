@@ -1,0 +1,26 @@
+{
+	"name": "sourcefile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkforADS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "population_by_age.tsv.zip",
+				"container": "source-d"
+			},
+			"columnDelimiter": "\t",
+			"rowDelimiter": "\n",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

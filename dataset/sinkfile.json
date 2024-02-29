@@ -5,12 +5,20 @@
 			"referenceName": "LinkforADLS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"destfilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "example.tsv",
+				"fileName": {
+					"value": "@dataset().destfilename",
+					"type": "Expression"
+				},
 				"fileSystem": "dest-d"
 			},
 			"columnDelimiter": "\t",

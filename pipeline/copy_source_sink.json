@@ -122,13 +122,25 @@
 							"inputs": [
 								{
 									"referenceName": "sourcefile",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"sourcefilename": {
+											"value": "@variables('source')",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "sinkfile",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"destfilename": {
+											"value": "@variables('dest')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -136,6 +148,16 @@
 				}
 			}
 		],
+		"variables": {
+			"source": {
+				"type": "String",
+				"defaultValue": "population_by_age.tsv.zip"
+			},
+			"dest": {
+				"type": "String",
+				"defaultValue": "covid_19.tsv"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2024-02-28T05:51:35Z"
 	},

@@ -5,12 +5,20 @@
 			"referenceName": "LinkforADS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sourcefilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "population_by_age.tsv.zip",
+				"fileName": {
+					"value": "@dataset().sourcefilename",
+					"type": "Expression"
+				},
 				"container": "source-d"
 			},
 			"columnDelimiter": "\t",

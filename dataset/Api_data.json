@@ -15,10 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": {
-					"value": "@dataset().relpa",
-					"type": "Expression"
-				}
+				"relativeUrl": "/covid19/nationalcasedeath/csv/data.csv"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",
